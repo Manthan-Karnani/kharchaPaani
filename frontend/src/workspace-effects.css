@@ -1,0 +1,160 @@
+/* Hover and press feedback for workspace controls and cards. */
+.app-shell :is(.stat-card, .panel, .sidebar-note, .budget-empty, .journey-note),
+.modal :is(.amount-entry, .soft-note) {
+  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease, background-color 220ms ease;
+}
+
+:is(.app-shell, .modal) button {
+  transition: transform 180ms ease, background 180ms ease, color 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+:is(.app-shell, .modal) .button {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+:is(.app-shell, .modal) .button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(110deg, transparent 25%, #fff4 50%, transparent 75%);
+  transform: translateX(-140%);
+  transition: transform 650ms ease;
+}
+
+:is(.app-shell, .modal) button:not(:disabled):focus-visible {
+  outline: 2px solid var(--gold-bright);
+  outline-offset: 4px;
+  box-shadow: 0 0 0 5px #d9b66f15, 0 0 22px #d9b66f20;
+}
+
+.app-shell :is(.stat-card, .panel):focus-within,
+.modal .amount-entry:focus-within {
+  border-color: #d9b66f80;
+  box-shadow: 0 0 0 1px #d9b66f15, 0 8px 32px #0005, 0 0 24px #d9b66f0e;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .app-shell :is(.stat-card, .panel, .sidebar-note):hover {
+    transform: translateY(-3px);
+    border-color: #d9b66f70;
+    box-shadow: 0 12px 35px #0006, 0 0 24px #d9b66f0d;
+  }
+
+  .app-shell :is(.budget-empty, .journey-note):hover,
+  .modal :is(.amount-entry, .soft-note):hover {
+    border-color: #d9b66f70;
+    box-shadow: inset 0 1px 0 #f1d69a0a, 0 0 20px #d9b66f0c;
+  }
+
+  .app-shell .remaining-card.is-over:hover {
+    border-color: #efa58e80;
+    box-shadow: 0 12px 35px #0006, 0 0 24px #efa58e12;
+  }
+
+  .app-shell .journey-note.over:hover { border-color: #efa58e80; }
+
+  :is(.app-shell, .modal) button:not(:disabled):hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px #d9b66f25;
+  }
+
+  :is(.app-shell, .modal) .primary:not(:disabled):hover {
+    box-shadow: 0 7px 28px #d9b66f40, inset 0 1px 0 #fff4;
+  }
+
+  :is(.app-shell, .modal) .button:not(:disabled):hover::before { transform: translateX(140%); }
+
+  .app-shell .sidebar nav button:not(:disabled):hover {
+    transform: translateX(3px);
+    border-color: #d9b66f50;
+    box-shadow: inset 2px 0 0 var(--gold), 0 4px 16px #d9b66f0a;
+  }
+
+  .modal .danger:not(:disabled):hover,
+  .app-shell .delete-button:not(:disabled):hover { box-shadow: 0 4px 18px #efa58e30; }
+
+  /* The full-screen navigation scrim must stay fixed when hovered. */
+  .app-shell .sidebar-scrim:not(:disabled):hover { transform: none; box-shadow: none; }
+}
+
+/* A short press works for mouse, keyboard activation, and touch. */
+:is(.app-shell, .modal) button:not(:disabled):active {
+  transform: translateY(1px) scale(.96);
+  box-shadow: inset 0 2px 8px #0003, 0 0 12px #d9b66f18;
+  transition-duration: 80ms;
+}
+.app-shell .sidebar nav button:not(:disabled):active { transform: translateX(1px) scale(.98); }
+.app-shell .sidebar-scrim:not(:disabled):active { transform: none; box-shadow: none; }
+
+.modal-backdrop { animation: workspace-overlay-in 180ms ease both; }
+.modal { animation: workspace-dialog-in 300ms cubic-bezier(.2, .8, .2, 1) both; }
+
+@keyframes workspace-overlay-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes workspace-dialog-in {
+  from { opacity: 0; transform: translateY(16px) scale(.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* A brief, quiet welcome when the Expenses page opens. */
+.money-shower {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.money-shower-piece {
+  position: absolute;
+  top: -28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  animation: money-shower-fall var(--duration) cubic-bezier(.22, .55, .45, 1) var(--delay) both;
+}
+
+.money-shower-coin {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #b87911;
+  border-radius: 50%;
+  color: #96600b;
+  background: radial-gradient(circle at 30% 25%, #fff3b0 0%, #f9d45c 35%, #e9ac23 68%, #bd7c12 100%);
+  box-shadow: inset 0 0 0 1px #ffe89a, inset -2px -2px 3px #a9691566, 1px 2px 0 #8e5b13, 0 2px 6px #d9a42840;
+}
+
+.money-shower-coin::before {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  border: 1px solid #bb801c;
+  border-radius: 50%;
+  box-shadow: 0 1px 0 #fff0a5;
+}
+
+.money-shower-coin svg {
+  position: relative;
+  filter: drop-shadow(0 1px 0 #fff0a5);
+}
+
+@keyframes money-shower-fall {
+  0% { opacity: 0; transform: translate3d(0, 0, 0) rotate(0deg); }
+  12% { opacity: .95; }
+  90% { opacity: .75; }
+  100% { opacity: 0; transform: translate3d(var(--drift), calc(100dvh + 48px), 0) rotate(var(--rotation)); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .money-shower { display: none; }
+  .money-shower-piece { animation: none; }
+  .app-shell :is(.stat-card, .panel, .sidebar-note):hover,
+  :is(.app-shell, .modal) button:not(:disabled):is(:hover, :active),
+  .app-shell .sidebar nav button:not(:disabled):is(:hover, :active) { transform: none; }
+  :is(.app-shell, .modal) .button::before { display: none; }
+  .modal, .modal-backdrop { animation: none; }
+}
+

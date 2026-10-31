@@ -1,0 +1,217 @@
+/* Bundled fonts work locally without a third-party font request. */
+@font-face {
+  font-family: 'Outfit Variable';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('@fontsource-variable/outfit/files/outfit-latin-wght-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Fraunces Variable';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('@fontsource-variable/fraunces/files/fraunces-latin-wght-normal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Fraunces Variable';
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('@fontsource-variable/fraunces/files/fraunces-latin-wght-italic.woff2') format('woff2');
+}
+
+:root { font-size: 16px; line-height: 1.5; }
+button, input, select { font-family: var(--font-sans); }
+.brand-name { font-family: var(--font-display); font-weight: 500; letter-spacing: -1px; }
+.button { min-height: 44px; height: auto; padding: 11px 18px; font-size: 15px; line-height: 1.35; }
+.text-button { font-size: 14px; min-height: 36px; }
+.icon-button { width: 36px; height: 36px; }
+.field > label, .modal .field > label { font-size: 15px; }
+.field-hint, .field-error, .modal .muted.small { font-size: 14px; line-height: 1.6; }
+.notice, .auth-layout .notice { font-size: 15px; line-height: 1.6; }
+.loading-state { font-size: 16px; }
+
+/* Keep the wider, readable navigation stable at desktop breakpoints. */
+.sidebar { width: 252px; padding-inline: 22px; overflow-y: auto; }
+.sidebar .brand-name { font-size: 26px; }
+.sidebar .brand-mark { width: 40px; height: 40px; }
+.main-shell { margin-left: 252px; width: calc(100% - 252px); }
+.nav-section { margin-top: 38px; }
+.sidebar nav button { font-size: 16px; padding: 14px 12px; }
+.user-box strong { font-size: 15px; }
+.user-box .icon-button { width: 34px; height: 34px; }
+.avatar { width: 36px; height: 36px; font-family: var(--font-sans); font-size: 16px; }
+.breadcrumb { font-size: 14px; }
+.page-heading { align-items: flex-start; }
+.page-heading h1 { font-size: clamp(30px, 3vw, 42px); line-height: 1.2; letter-spacing: -1px; }
+.page-heading p { font-size: 16px; max-width: 560px; line-height: 1.65; }
+.add-expense { flex-shrink: 0; margin-top: 12px; }
+.month-title h2 { font-size: 19px; }
+.period-badge { font-size: 12px; letter-spacing: .6px; }
+.month-input { font-size: 14px; }
+.month-picker .icon-button { width: 32px; height: 32px; }
+
+.stat-heading, .remaining-card .stat-heading { font-size: 16px; }
+.stat-value { font-size: clamp(27px, 2.5vw, 36px); font-weight: 500; }
+.stat-foot, .remaining-card .stat-foot { font-size: 14px; line-height: 1.6; align-items: flex-start; }
+.stat-foot button { width: 28px; height: 28px; flex-shrink: 0; }
+.stat-foot :is(.stat-dot, .status-dot) { margin-top: 8px; flex-shrink: 0; }
+.panel h2 { font-size: 21px; line-height: 1.35; }
+.journey-head { font-size: 15px; flex-wrap: wrap; }
+.journey-head strong { font-size: 29px; }
+.journey-head .text-button { font-size: 14px; }
+.journey-labels { font-size: 14px; flex-wrap: wrap; }
+.journey-note p, .budget-empty p { font-size: 15px; line-height: 1.65; }
+.journey-note strong, .budget-empty h3 { font-size: 16px; line-height: 1.5; }
+.budget-empty .button { min-height: 42px; height: auto; font-size: 14px; margin-left: 0; margin-top: 16px; }
+.budget-empty-copy { padding-left: 0; }
+.budget-empty-copy .empty-glyph { display: none; }
+.donut-label small { font-size: 13px; }
+.legend-row { font-size: 15px; }
+.legend-row strong { font-size: 14px; }
+.legend-values small { font-size: 13px; }
+.category-content { gap: 20px; }
+.legend-row { align-items: flex-start; }
+.legend-name { white-space: normal; overflow-wrap: anywhere; }
+.legend-dot { margin-top: 7px; }
+.category-foot { font-size: 14px; flex-wrap: wrap; }
+.category-empty h3, .expenses-empty h3 { font-size: 18px; }
+.category-empty p, .expenses-empty p { font-size: 15px; }
+.count-badge { font-size: 13px; }
+.expense-heading .text-button { font-size: 14px; }
+.expense-heading, .expense-tools { flex-wrap: wrap; }
+.search-input { width: 220px; }
+.search-input input { height: 42px; font-size: 15px; }
+.search-input > svg { top: 13px; }
+.category-filter { height: 42px; }
+.category-filter select { font-size: 14px; max-width: 180px; }
+th { font-size: 12px; letter-spacing: .8px; }
+td { font-size: 15px; }
+.expense-description strong, .expense-amount { font-size: 16px; }
+.date-cell { font-size: 14px; }
+.category-pill { font-size: 13px; line-height: 1.5; }
+.row-actions .icon-button { width: 32px; height: 34px; }
+.table-foot { font-size: 14px; flex-wrap: wrap; }
+.expenses-empty .button { font-size: 15px; height: auto; }
+.expense-summary { display: grid; gap: 22px; }
+.expense-month-total { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; padding: 22px 24px; border-color: var(--gold-line); }
+.expense-month-total p { color: var(--muted); font-size: 14px; margin-top: 6px; }
+.expense-month-amount { color: var(--gold-bright); font-size: clamp(28px, 3vw, 38px); font-weight: 500; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; min-width: 0; }
+
+.modal-heading h2 { font-size: 32px; line-height: 1.25; margin-top: 0; }
+.modal-heading p, .soft-note { font-size: 15px; line-height: 1.65; }
+.modal input { font-size: 16px; height: 48px; }
+.modal select { width: 100%; min-height: 48px; padding: 10px 12px; border: 1px solid #ffffff20; border-radius: 9px; background: #0f0f11; color: var(--foreground); font-size: 16px; }
+.modal select:hover:not(:disabled) { border-color: #d9b66f60; }
+.modal select:focus { border-color: var(--gold); }
+.modal select[aria-invalid=true] { border-color: var(--warning); }
+.amount-entry > label { font-size: 13px; letter-spacing: 1px; }
+.category-tip { font-size: 14px; align-items: flex-start; }
+.category-tip svg { margin-top: 4px; }
+.modal-actions .button { font-size: 15px; height: auto; }
+.delete-summary strong, .delete-summary span { font-size: 17px; }
+
+/* Login text and its looping illustration stay readable without scaling type down. */
+.auth-layout .brand-name { font-size: 30px; }
+.auth-layout .story-content { padding-top: 38px; padding-bottom: 20px; }
+.auth-layout .story-content h1 { font-size: clamp(44px, 4.4vw, 68px); letter-spacing: -1.8px; line-height: 1.12; }
+.auth-layout .story-content > p { font-size: 17px; line-height: 1.7; }
+.auth-layout .auth-form-wrap { max-width: 420px; }
+.auth-layout .auth-form-wrap h2 { font-size: clamp(32px, 3vw, 44px); line-height: 1.2; }
+.auth-layout .auth-description { font-size: 16px; line-height: 1.65; }
+.auth-layout .auth-tabs button { font-size: 16px; padding-block: 12px; }
+.auth-layout .field > label { font-size: 15px; }
+.auth-layout .input-with-icon input { font-size: 16px; height: 54px; }
+.auth-layout .input-with-icon > svg { top: 18px; }
+.auth-layout .password-toggle { top: 10px; }
+.auth-layout .auth-submit { font-size: 15px; min-height: 54px; }
+.auth-layout .field-hint { font-size: 14px; }
+.auth-layout .story-motion-toggle { font-size: 14px; padding: 9px 12px; }
+.auth-layout .money-demo { width: 390px; height: 425px; max-width: none; margin-left: 50%; transform: translateX(-50%); transform-origin: top center; margin-bottom: 0; }
+.auth-layout .mini-label { font-size: 12px; letter-spacing: .35px; }
+.auth-layout .money-demo .front-card { left: 20px; width: 275px; padding: 20px; }
+.auth-layout .demo-ledger-row { font-size: 14px; padding-block: 8px; }
+.auth-layout .demo-receipt { width: 184px; left: 200px; font-size: 14px; }
+.auth-layout .demo-receipt strong { font-size: 14px; }
+.auth-layout .receipt-icon { width: 24px; height: 28px; flex-shrink: 0; }
+.auth-layout .money-demo .savings-card { top: 215px; height: 145px; width: 147px; left: 225px; }
+.auth-layout .savings-check { font-size: 12px; }
+.auth-layout .savings-number { height: 32px; line-height: 1.15; }
+.auth-layout .savings-bars { margin-top: 7px; }
+.auth-layout .money-demo .illustration-foot { font-size: 13px; }
+.auth-layout .spent-number { width: 110px; height: 20px; }
+.auth-layout .money-demo .little-note { bottom: -3px; left: 22px; font-size: 13px; }
+.auth-layout .story-phase-wrap { width: 248px; height: 20px; line-height: 20px; }
+
+@media (max-width: 1200px) {
+  .summary-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .remaining-card { grid-column: 1 / -1; }
+  .insights-grid { grid-template-columns: 1fr; }
+  .category-content { flex-direction: row; padding: 24px; }
+  .donut-wrap { width: 140px; height: 140px; }
+  .category-legend { max-width: none; }
+  .page-heading { flex-wrap: wrap; }
+  .auth-layout .auth-story, .auth-layout .auth-form-side { padding-inline: 30px; }
+}
+@media (max-width: 900px) {
+  .auth-layout .story-content h1 { font-size: 43px; }
+  .auth-layout .story-content > p { font-size: 16px; }
+  .auth-layout .auth-form-wrap h2 { font-size: 34px; }
+  .auth-layout .auth-story, .auth-layout .auth-form-side { padding-inline: 24px; }
+}
+@media (max-width: 760px) {
+  .sidebar { width: 252px; }
+  .main-shell { margin-left: 0; width: 100%; }
+  .sidebar .brand-name { font-size: 26px; }
+  .page-heading h1 { font-size: 34px; }
+  .page-heading p { max-width: none; }
+  .page-heading .add-expense { margin-top: 0; }
+  .month-row { flex-wrap: wrap; }
+  .month-title { flex-direction: row; align-items: center; }
+  .auth-layout .auth-story { padding: 26px 7% 30px; }
+  .auth-layout .story-content { padding: 0; }
+  .auth-layout .story-content h1 { font-size: clamp(38px, 7vw, 52px); }
+  .auth-layout .auth-form-side { padding: 35px 7%; }
+  .auth-layout .auth-form-wrap { padding-bottom: 0; }
+  .auth-layout .money-illustration { position: relative; left: 50%; top: auto; right: auto; margin: 22px 0 0; transform: translateX(-50%); width: 380px; height: 425px; }
+}
+@media (max-width: 480px) {
+  .summary-grid { grid-template-columns: 1fr; }
+  .stat-card { padding: 20px; }
+  .remaining-card { display: block; }
+  .remaining-card .stat-value { text-align: left; margin-top: 11px; font-size: 32px; }
+  .remaining-card .stat-foot { font-size: 14px; margin-top: 12px; }
+  .stat-value { font-size: 32px; }
+  .stat-heading, .remaining-card .stat-heading { font-size: 16px; }
+  .stat-foot { font-size: 14px; }
+  .month-picker { margin-top: 5px; }
+  .month-title h2 { font-size: 18px; }
+  .category-content { flex-direction: column; align-items: stretch; gap: 24px; }
+  .donut-wrap { align-self: center; width: 150px; height: 150px; }
+  .search-input { width: 100%; flex: 1 1 100%; }
+  .category-filter { width: 100%; }
+  .category-filter select { width: 100%; max-width: none; }
+  .modal { padding: 22px; }
+  .modal-heading h2 { font-size: 29px; }
+  .modal-actions { flex-wrap: wrap; }
+  .modal-actions .button { flex: 1; }
+  .auth-layout .auth-form-wrap h2 { font-size: 34px; }
+  .auth-layout .auth-description { font-size: 16px; }
+  .auth-layout .money-illustration { width: 340px; }
+  .auth-layout .money-demo .front-card { left: 6px; width: 260px; }
+  .auth-layout .money-demo .savings-card { left: 186px; width: 143px; top: 224px; }
+  .auth-layout .demo-receipt { left: 151px; width: 183px; }
+  .auth-layout .money-demo .little-note { left: 8px; }
+  .auth-layout .money-demo .orbit-one { left: 8px; }
+  .auth-layout .money-demo .orbit-two { left: 38px; }
+}
+@media (max-width: 359px) {
+  .auth-layout .story-content h1 { font-size: 36px; }
+  .auth-layout .money-illustration { width: 300px; display: block; }
+  .auth-layout .money-demo .front-card { width: 242px; padding: 16px; }
+  .auth-layout .money-demo .savings-card { left: 157px; width: 139px; }
+  .auth-layout .demo-receipt { left: 111px; }
+  .auth-layout .money-demo .little-note { left: 0; padding-inline: 9px; }
+  .auth-layout .story-phase-wrap { width: 236px; font-size: 12px; }
+}

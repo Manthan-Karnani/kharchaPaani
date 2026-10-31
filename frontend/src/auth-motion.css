@@ -1,0 +1,104 @@
+/* The money story is a focal point: bright budget, green savings, visible motion. */
+.auth-layout .auth-story {
+  background: radial-gradient(ellipse at 52% 64%, #b7842738, transparent 62%), linear-gradient(145deg, #19160f, #0c0c0d 80%);
+}
+.auth-layout .money-demo { width: 440px; height: 465px; margin-top: 34px; }
+.auth-layout .money-halo {
+  position: absolute; inset: 36px -18px 40px; border-radius: 50%;
+  background: radial-gradient(ellipse, #eabb4055, #c58b2520 44%, transparent 70%);
+  opacity: .65; pointer-events: none;
+}
+.auth-layout .money-motion-label {
+  position: absolute; inset: 0 0 auto; display: flex; align-items: center; justify-content: center;
+  gap: 9px; color: #f4d58e; font-size: 11px; font-weight: 600; letter-spacing: 2px;
+}
+.auth-layout .motion-status-dot { width: 7px; height: 7px; flex-shrink: 0; border-radius: 50%; background: #f5d58b; box-shadow: 0 0 0 4px #f5d58b15, 0 0 15px #f5d58b88; }
+.auth-layout .motion-demo-label { color: #c6b48c; font-size: 9px; letter-spacing: 1px; border: 1px solid #e5c58040; border-radius: 4px; padding: 3px 5px; }
+.auth-layout .money-flow { position: absolute; inset: 12px -8px 0; width: calc(100% + 16px); height: 425px; overflow: visible; pointer-events: none; }
+.auth-layout .money-flow path { stroke: #ebc97725; stroke-width: 2; }
+.auth-layout .money-flow .money-flow-trail { stroke: #f2ce7c; stroke-width: 3; stroke-dasharray: 8 22; stroke-linecap: round; opacity: .8; }
+.auth-layout .money-demo .orbit { border: 1px solid #eac77555; }
+.auth-layout .money-demo .orbit-one { width: 370px; height: 370px; left: 35px; top: 32px; }
+.auth-layout .money-demo .orbit-two { width: 310px; height: 310px; left: 65px; top: 62px; border-style: dashed; border-color: #eac77535; }
+.auth-layout .orbit-token {
+  position: absolute; left: 50%; top: -18px; display: grid; place-items: center; width: 36px; height: 36px;
+  border: 2px solid #ffe4a1; border-radius: 50%; color: #63421a; background: linear-gradient(135deg, #ffedb5, #db9c36);
+  box-shadow: inset 0 0 0 3px #b67e3340, 0 0 24px #e5b85660; font-size: 22px; font-weight: 600;
+}
+.auth-layout .orbit-two .orbit-token { width: 26px; height: 26px; top: auto; bottom: -13px; font-size: 16px; }
+.auth-layout .orbit-dot { position: absolute; top: 50%; right: -5px; width: 9px; height: 9px; border-radius: 50%; background: #ffe4a1; box-shadow: 0 0 20px #f8d683; }
+.auth-layout .money-demo .front-card {
+  left: 30px; top: 65px; width: 300px; padding: 23px; border: 1px solid #ffe6ab;
+  background: radial-gradient(ellipse at 0 0, #fff1cb, transparent 65%), linear-gradient(130deg, #f0d393, #d4ad5f);
+  box-shadow: 0 24px 55px #0008, 0 0 50px #e1b65e22, inset 0 1px 0 #fff8; transform: rotate(-6deg);
+}
+.auth-layout .money-demo .front-card::after { content: ''; position: absolute; inset: 7px; border: 1px solid #fff6; border-radius: 9px; pointer-events: none; }
+.auth-layout .money-demo .illustration-card-top { margin-bottom: 18px; color: #78571f; }
+.auth-layout .money-demo .wallet-tile { width: 40px; height: 40px; color: #71501c; background: #fff6; border-color: #fff7; }
+.auth-layout .money-demo .front-card .mini-label { color: #735624; font-size: 11px; letter-spacing: 1.5px; font-weight: 600; }
+.auth-layout .money-demo .budget-number { height: 56px; line-height: 56px; margin-block: 7px 12px; font-size: 48px; color: #342713; letter-spacing: -2px; }
+.auth-layout .money-demo .demo-ledger { margin-bottom: 17px; }
+.auth-layout .money-demo .demo-ledger-row { color: #745a2d; border-color: #7c5a2825; }
+.auth-layout .money-demo .demo-ledger-row b { color: #443116; font-weight: 600; }
+.auth-layout .money-demo .demo-ledger-row > svg { color: #715123; }
+.auth-layout .money-demo .illustration-progress { height: 7px; background: #75532624; }
+.auth-layout .money-demo .illustration-progress span { background: linear-gradient(90deg, #725125, #a07836); }
+.auth-layout .money-demo .illustration-foot { color: #6e5227; font-size: 12px; gap: 10px; }
+.auth-layout .money-demo .spent-number { text-align: right; }
+.auth-layout .money-demo .savings-card {
+  left: 275px; top: 237px; width: 156px; height: 153px; padding: 16px;
+  border: 1px solid #b4e5b999; background: linear-gradient(140deg, #254d3e, #142d25);
+  box-shadow: 0 18px 40px #0008, 0 0 28px #9bde9820; transform: rotate(9deg);
+}
+.auth-layout .money-demo .savings-card .mini-label { display: flex; gap: 4px; align-items: center; color: #c0dfbd; font-size: 10px; letter-spacing: .8px; white-space: nowrap; }
+.auth-layout .money-demo .savings-number { font-size: 32px; height: 37px; color: #e3f6c9; }
+.auth-layout .money-demo .savings-bars { gap: 7px; }
+.auth-layout .money-demo .savings-bars i { background: linear-gradient(#d8efad, #83b88a); }
+.auth-layout .money-demo .savings-check { color: #c4e7c1; font-size: 11px; }
+.auth-layout .savings-burst { position: absolute; display: flex; align-items: center; gap: 5px; top: -32px; left: -12px; white-space: nowrap; padding: 7px 10px; border: 1px solid #c2e8a8; border-radius: 20px; background: #ddf4c6; color: #294c30; font-size: 12px; font-weight: 600; opacity: 0; }
+.auth-layout .money-demo .demo-receipt { top: 42px; left: 242px; width: 190px; padding: 12px; background: #272319; border-color: #f0d293; box-shadow: 0 10px 32px #0009, 0 0 20px #edc97920; }
+.auth-layout .money-demo .demo-receipt strong { font-weight: 600; color: #ffe3a4; }
+.auth-layout .money-demo .story-coin { width: 34px; height: 34px; font-size: 21px; box-shadow: inset 0 0 0 2px #8e682a, 0 0 18px #f6c85e66; }
+.auth-layout .money-demo .story-spark { width: 6px; height: 6px; opacity: .65; transform: rotate(45deg); box-shadow: 0 0 18px #f4d58b99; }
+.auth-layout .money-demo .little-note { bottom: 17px; left: 46px; background: #272217; border-color: #d9b66f60; color: #f5dba0; padding: 10px 13px; }
+.auth-layout .money-steps { position: absolute; top: 28px; inset-inline: 0; display: flex; align-items: center; justify-content: center; gap: 9px; color: #ebd7ad; font-size: 11px; }
+.auth-layout .money-step { display: flex; align-items: center; gap: 5px; opacity: .65; }
+.auth-layout .money-step b { color: #eecb80; font-size: 9px; font-weight: 500; }
+.auth-layout .money-steps > i { width: 19px; height: 1px; background: #ebd7ad40; }
+@media (min-width: 761px) and (max-width: 1100px) {
+  .auth-layout .money-demo { width: 370px; }
+  .auth-layout .money-demo .front-card { left: 10px; width: 280px; }
+  .auth-layout .money-demo .savings-card { left: 213px; }
+  .auth-layout .money-demo .demo-receipt { left: 177px; }
+  .auth-layout .money-demo .orbit-one { left: 0; }
+  .auth-layout .money-demo .orbit-two { left: 30px; }
+  .auth-layout .money-demo .little-note { left: 26px; }
+}
+@media (max-width: 760px) {
+  .auth-layout .money-demo { width: 380px; height: 455px; margin-top: 30px; }
+  .auth-layout .money-demo .front-card { left: 12px; width: 285px; }
+  .auth-layout .money-demo .savings-card { left: 222px; }
+  .auth-layout .money-demo .demo-receipt { left: 185px; }
+  .auth-layout .money-demo .orbit-one { left: 5px; }
+  .auth-layout .money-demo .orbit-two { left: 35px; }
+  .auth-layout .money-demo .little-note { left: 30px; bottom: 10px; }
+}
+@media (max-width: 480px) {
+  .auth-layout .money-demo { width: 340px; }
+  .auth-layout .money-demo .front-card { left: 6px; width: 265px; padding: 20px; }
+  .auth-layout .money-demo .savings-card { left: 182px; top: 236px; width: 149px; }
+  .auth-layout .money-demo .demo-receipt { left: 139px; }
+  .auth-layout .money-demo .orbit-one { width: 326px; height: 350px; left: 7px; top: 44px; }
+  .auth-layout .money-demo .orbit-two { width: 286px; height: 300px; left: 27px; top: 69px; }
+  .auth-layout .money-demo .little-note { left: 12px; }
+}
+@media (max-width: 359px) {
+  .auth-layout .money-demo { width: 300px; }
+  .auth-layout .money-demo .front-card { left: 5px; width: 242px; padding: 17px; }
+  .auth-layout .money-demo .savings-card { left: 154px; width: 139px; }
+  .auth-layout .money-demo .demo-receipt { left: 105px; }
+  .auth-layout .money-demo .orbit-one { width: 290px; left: 5px; }
+  .auth-layout .money-demo .orbit-two { width: 250px; left: 25px; }
+  .auth-layout .money-demo .little-note { left: 0; }
+  .auth-layout .money-motion-label { font-size: 10px; letter-spacing: 1.3px; }
+}
